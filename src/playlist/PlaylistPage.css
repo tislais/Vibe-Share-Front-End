@@ -1,0 +1,21 @@
+h2 {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+input {
+  height: 20px;
+  margin: 6px;
+  border-radius: 10px;
+}
+
+.playListDescription {
+  height: 50px;
+  width: 170px;
+}
+
+form {
+  text-align: center;
+}
+
