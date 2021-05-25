@@ -3,7 +3,10 @@ import './PlaylistPage.css';
 
 export default class PlaylistPage extends Component {
   state = {
-    title: ''
+    title: '',
+    URL: '',
+    description: '',
+    send: ''
   }
 
   handleTitle = e => {
@@ -11,8 +14,22 @@ export default class PlaylistPage extends Component {
 
   }
 
+  handleURL = e => {
+    this.setState({ URL: e.target.value });
+
+  }
+
+  handleDescription = e => {
+    this.setState({ description: e.target.value });
+
+  }
+
+  handleSendTo = e => {
+    this.setState({ send: e.target.value });
+  }
+
   render() {
-    console.log(this.state.title);
+    console.log(this.state.URL);
 
     return (
       <div className="PlaylistPage">
@@ -26,8 +43,32 @@ export default class PlaylistPage extends Component {
             </label>
           </p>
 
+          <p>
+            <label>
+              <span>PlaylistURL</span>
+              <input className="playListURL" placeholder="PlayList URL" onChange={this.handleURL} value={this.state.URL} />
 
-        </form>
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <span>PlaylistDescription</span>
+              <input className="playListDescription" placeholder="PlayList Description" onChange={this.handleDescription} value={this.state.description} />
+
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <span>PlaylistSendTo</span>
+              <input className="playListSendTo" placeholder="PlayList Send To" onChange={this.handleSendTo} value={this.state.send} />
+
+            </label>
+          </p>
+
+
+        </form >
 
       </div >
     );
