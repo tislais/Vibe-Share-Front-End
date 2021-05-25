@@ -1,13 +1,17 @@
 import { Component } from 'react';
-import './PlaylistPage.css';
+import './CreateMixTape.css';
 
-export default class PlaylistPage extends Component {
+export default class CreateMixTape extends Component {
   state = {
     title: ''
   }
 
   handleTitle = e => {
     this.setState({ title: e.target.value });
+
+  }
+
+  handleSubmit = e => {
 
   }
 
