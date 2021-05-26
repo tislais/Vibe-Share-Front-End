@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { addMixtape } from '../utils/mixtape-api';
 import './CreateMixTape.css';
 
 export default class CreateMixTape extends Component {
@@ -6,7 +7,20 @@ export default class CreateMixTape extends Component {
     title: '',
     youTubeLink: '',
     description: '',
-    send: ''
+    send: '',
+    theme: ''
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const { history } = this.props;
+    try {
+      const mixtape = addMixtape(this.state);
+      history.push(`/mixtape/${mixtape.id}`);
+    }
+    catch (err) {
+      console.log(err.message);
+    }
   }
 
   handleTitle = e => {
@@ -14,7 +28,7 @@ export default class CreateMixTape extends Component {
 
   }
 
-  handleYouTubeLink = e => {
+  handleURL = e => {
     this.setState({ URL: e.target.value });
 
   }
@@ -28,13 +42,28 @@ export default class CreateMixTape extends Component {
     this.setState({ send: e.target.value });
   }
 
+  handleTheme = e => {
+    this.setState({ theme: e.target.value });
+  }
+
+
+
   render() {
     console.log(this.state.URL);
 
     return (
       <div className="PlaylistPage">
-        <form className="playListForm">
+        <form className="playListForm" onSubmit={this.handleSubmit}>
           <h2>Choose your Theme</h2>
+          <select name='theme' className='themeDrop'
+            onChange={this.handleTheme}>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+
+
           <p>
             <label>
               <span>Playlist</span>
@@ -61,7 +90,7 @@ export default class CreateMixTape extends Component {
 
           <p>
             <label>
-              <span>Send To</span>
+              <span>Recipient</span>
               <input className="playListSendTo" placeholder="PlayList Send To" onChange={this.handleSendTo} value={this.state.send} />
 
             </label>

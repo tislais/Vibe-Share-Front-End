@@ -3,7 +3,7 @@ import request from 'superagent';
 export async function signUp(credentials) {
   const response = await request
     .post('/api/auth/signup')
-    .ok(res => res.status < 500) 
+    .ok(res => res.status < 500)
     .send(credentials);
 
   if (response.status === 400) {
@@ -55,6 +55,15 @@ export async function addFavorite(favorite) {
   const response = await request
     .post('/api/favorites')
     .send(favorite)
+    .set('Authorization', window.localStorage.getItem('TOKEN'));
+
+  return response.body;
+}
+
+export async function addMixtape(mixtape) {
+  const response = await request
+    .post('/api/mixtape')
+    .send(mixtape)
     .set('Authorization', window.localStorage.getItem('TOKEN'));
 
   return response.body;
