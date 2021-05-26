@@ -3,7 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 //import Home from '../home/Home';
 import AuthPage from '../auth/AuthPage';
-import Favorites from '../Profile-Page/ProfilePage';
 import PlaylistPage from '../playlist/PlaylistPage';
 import {
   BrowserRouter as Router,
