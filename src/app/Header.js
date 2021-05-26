@@ -12,8 +12,6 @@ class Header extends Component {
           <div className="neon">Vibe Share</div>
         </div>
         <NavLink to="/profile-page" exact={true} className='HeaderLinks'>Profile Page</NavLink>
-
-        <h1>Vibe Share</h1>
         <NavLink to="/profile-page" exact={true} className='HeaderLinks'>{userName}</NavLink>
         <NavLink to="/playlists" exact={true} className='HeaderLinks'>Global Playlists</NavLink>
         <NavLink to="/" exact={true} className='HeaderLinks'>Logout</NavLink>
