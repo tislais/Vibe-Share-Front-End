@@ -5,17 +5,17 @@ import './CreateMixTape.css';
 export default class CreateMixTape extends Component {
   state = {
     title: '',
-    youTubeLink: '',
-    description: '',
-    send: '',
+    playlist_id: '',
+    note: '',
+    recipient: '',
     theme: ''
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
     const { history } = this.props;
     try {
-      const mixtape = addMixtape(this.state);
+      const mixtape = await addMixtape(this.state);
       history.push(`/mixtape/${mixtape.id}`);
     }
     catch (err) {
@@ -29,17 +29,17 @@ export default class CreateMixTape extends Component {
   }
 
   handleURL = e => {
-    this.setState({ URL: e.target.value });
+    this.setState({ playlist_id: e.target.value });
 
   }
 
   handleDescription = e => {
-    this.setState({ description: e.target.value });
+    this.setState({ note: e.target.value });
 
   }
 
   handleSendTo = e => {
-    this.setState({ send: e.target.value });
+    this.setState({ recipient: e.target.value });
   }
 
   handleTheme = e => {
@@ -91,7 +91,7 @@ export default class CreateMixTape extends Component {
           <p>
             <label>
               <span>Recipient</span>
-              <input className="playListSendTo" placeholder="PlayList Send To" onChange={this.handleSendTo} value={this.state.send} />
+              <input className="playListSendTo" placeholder="PlayList Send To" onChange={this.handleSendTo} value={this.state.recipient} />
 
             </label>
           </p>
