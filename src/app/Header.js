@@ -9,7 +9,7 @@ class Header extends Component {
       <header className="Header">
 
         <h1>Vibe Share</h1>
-        <NavLink to="/auth" exact={true} className='HeaderLinks'>Profile Page</NavLink>
+        <NavLink to="/profile-page" exact={true} className='HeaderLinks'>Profile Page</NavLink>
         <NavLink to="/playlists" exact={true} className='HeaderLinks'>Global Playlists</NavLink>
         <NavLink to="/" exact={true} className='HeaderLinks'>Logout</NavLink>
 

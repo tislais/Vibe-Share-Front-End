@@ -3,7 +3,10 @@ import './CreateMixTape.css';
 
 export default class CreateMixTape extends Component {
   state = {
-    title: ''
+    title: '',
+    youTubeLinkL: '',
+    description: '',
+    send: ''
   }
 
   handleTitle = e => {
@@ -11,12 +14,22 @@ export default class CreateMixTape extends Component {
 
   }
 
-  handleSubmit = e => {
+  handleYouTubeLink = e => {
+    this.setState({ URL: e.target.value });
 
   }
 
+  handleDescription = e => {
+    this.setState({ description: e.target.value });
+
+  }
+
+  handleSendTo = e => {
+    this.setState({ send: e.target.value });
+  }
+
   render() {
-    console.log(this.state.title);
+    console.log(this.state.URL);
 
     return (
       <div className="PlaylistPage">
@@ -30,8 +43,32 @@ export default class CreateMixTape extends Component {
             </label>
           </p>
 
+          <p>
+            <label>
+              <span>YouTube Link</span>
+              <input className="youTubeLink" placeholder="YouTube Link" onChange={this.handleURL} value={this.state.URL} />
 
-        </form>
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <span>Playlist Description</span>
+              <input className="playListDescription" placeholder="PlayList Description" onChange={this.handleDescription} value={this.state.description} />
+
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <span>Send To</span>
+              <input className="playListSendTo" placeholder="PlayList Send To" onChange={this.handleSendTo} value={this.state.send} />
+
+            </label>
+          </p>
+
+
+        </form >
 
       </div >
     );
