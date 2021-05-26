@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 //import Home from '../home/Home';
 import AuthPage from '../auth/AuthPage';
-import Favorites from '../favorites/FavoritesPage';
+import Favorites from '../Profile-Page/ProfilePage';
 import PlaylistPage from '../playlist/PlaylistPage';
 import {
   BrowserRouter as Router,
@@ -13,6 +13,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import CreateMixTape from '../playlist/CreateMixTape';
+import ProfilePage from '../Profile-Page/ProfilePage';
 
 class App extends Component {
 
@@ -78,10 +79,10 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/favorites" exact={true}
+              <Route path="/profile-page" exact={true}
                 render={routerProps => (
                   token
-                    ? <Favorites {...routerProps} />
+                    ? <ProfilePage {...routerProps} />
                     : <Redirect to="/auth" />
                 )}
               />
