@@ -1,5 +1,6 @@
 .Footer {
   padding: 5px;
   font-size: .8rem;
-  background: rgba(0, 0, 0, 0.1);
+  /* background-image: linear-gradient(#04005e, #440bde, #ff2079, #e92efb); */
+  background-color: #222;
 }

@@ -1,5 +1,6 @@
 .Header {
   padding: 20px;
+  /* background-image: linear-gradient(#04005e, #440bde, #ff2079, #e92efb); */
   background-color: #222;
   color: #eee;
 }
@@ -11,6 +12,60 @@ h1 {
 }
 
 .HeaderLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   font-family: 'Permanent Marker', cursive;
+  padding: 2px;
+}
 
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.neon {
+  font-family: 'Permanent Marker', cursive;
+  color: #FB4264;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #F40A35;
+  padding: 2px;
+}
+
+
+
+.neon {
+  animation: neon 2s ease infinite;
+  -moz-animation: neon 2s ease infinite;
+  -webkit-animation: neon 2s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #e900ff, 0 0 3vw #e900ff, 0 0 10vw #e900ff, 0 0 10vw #e900ff, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #faeb2c;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #1685f8, 0 0 1.5vw #1685f8, 0 0 5vw #1685f8, 0 0 5vw #1685f8, 0 0 .2vw #1685f8, .5vw .5vw .1vw #40340A;
+    color: 	#f52789;
+  }
+}
+
+a:link {
+  color: #429dff;
+}
+
+a:visited {
+  color: #429dff;
+}
+
+a:hover {
+  color: #f52789;
 }
