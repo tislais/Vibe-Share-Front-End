@@ -4,7 +4,7 @@ import './CreateMixTape.css';
 export default class CreateMixTape extends Component {
   state = {
     title: '',
-    youTubeLinkL: '',
+    youTubeLink: '',
     description: '',
     send: ''
   }
@@ -67,11 +67,10 @@ export default class CreateMixTape extends Component {
             </label>
           </p>
 
-
+          <button>Add</button>
         </form >
 
-      </div >
+      </div>
     );
   }
-
 }
