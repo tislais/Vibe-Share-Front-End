@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import { Favorites } from './Favorites';
 import './ProfilePage.css';
 
 export default class ProfilePage extends Component {
