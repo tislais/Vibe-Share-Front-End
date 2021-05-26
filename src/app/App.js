@@ -83,7 +83,7 @@ class App extends Component {
               <Route path="/profile-page" exact={true}
                 render={routerProps => (
                   token
-                    ? <ProfilePage {...routerProps} />
+                    ? <ProfilePage {...routerProps} userName={userName} />
                     : <Redirect to="/auth" />
                 )}
               />

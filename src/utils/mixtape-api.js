@@ -69,6 +69,14 @@ export async function addMixtape(mixtape) {
   return response.body;
 }
 
+export async function getMixtapeById(id) {
+  const response = await request
+    .get(`api/mixtape/${id}`)
+    .set('Authorization', window.localStorage.getItem('TOKEN'));
+
+  return response.body;
+}
+
 export async function deleteFavorite(id) {
   const response = await request
     .delete(`/api/favorites/${id}`)
