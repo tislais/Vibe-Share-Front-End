@@ -3,7 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 //import Home from '../home/Home';
 import AuthPage from '../auth/AuthPage';
-//import Favorites from '../Profile-Page/ProfilePage';
 import PlaylistPage from '../playlist/PlaylistPage';
 import {
   BrowserRouter as Router,
@@ -14,6 +13,7 @@ import {
 import './App.css';
 import CreateMixTape from '../playlist/CreateMixTape';
 import ProfilePage from '../Profile-Page/ProfilePage';
+import MixtapeDetail from '../detail/MixtapeDetail';
 
 class App extends Component {
 
@@ -73,11 +73,12 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/playlist/:id"
+              <Route path="/mixtape/:id"
                 render={routerProps => (
-                  <div>Implement a page for id {routerProps.match.params.id}</div>
+                  <MixtapeDetail {...routerProps} />
                 )}
               />
+
 
               <Route path="/profile-page" exact={true}
                 render={routerProps => (
