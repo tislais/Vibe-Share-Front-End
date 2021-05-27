@@ -11,3 +11,18 @@ main {
   justify-content: center;
 }
 
+.container {
+  background-color: #222;
+}
+
+
+.container .neon {
+  font-family: 'Permanent Marker', cursive;
+  color: #FB4264;
+  font-size: 2.6rem;
+  text-shadow: 0 0 3vw #F40A35;
+  padding: 2px;
+}
+
+
+

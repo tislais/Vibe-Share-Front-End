@@ -12,9 +12,7 @@ class Header extends Component {
     const { userName } = this.props;
     return (
       <header className="Header">
-        <div className="container">
-          <div className="neon">Vibe Share</div>
-        </div>
+        <div className="neon">Vibe Share</div>
         <div className="NavLinks">
           <NavLink to="/profile-page" exact={true} className='HeaderLinks'>{userName}</NavLink>
           <NavLink to="/playlists" exact={true} className='HeaderLinks'>All Playlists</NavLink>
