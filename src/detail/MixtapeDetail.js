@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { getMixtapeById, getMixtapeItemsById } from '../utils/mixtape-api';
-
-
+import './MixtapeDetail.css';
 
 export default class MixtapeDetail extends Component {
   state = {
@@ -9,8 +8,6 @@ export default class MixtapeDetail extends Component {
     playlist_id: '',
     mixtapeItems: []
   };
-
-
 
   async componentDidMount() {
     const { match } = this.props;
