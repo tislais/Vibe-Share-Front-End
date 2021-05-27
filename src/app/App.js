@@ -28,7 +28,7 @@ class App extends Component {
     window.localStorage.setItem('USER_ID', user.id);
     window.localStorage.setItem('TOKEN', user.token);
 
-    this.setState({ token: user.token });
+    this.setState({ token: user.token, userId: user.id, userName: user.name });
   }
 
   render() {
