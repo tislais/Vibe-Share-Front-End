@@ -11,11 +11,11 @@ class Header extends Component {
         <div className="container">
           <div className="neon">Vibe Share</div>
         </div>
-        <NavLink to="/profile-page" exact={true} className='HeaderLinks'>Profile Page</NavLink>
-        <NavLink to="/profile-page" exact={true} className='HeaderLinks'>{userName}</NavLink>
-        <NavLink to="/playlists" exact={true} className='HeaderLinks'>Global Playlists</NavLink>
-        <NavLink to="/" exact={true} className='HeaderLinks'>Logout</NavLink>
-
+        <div className="NavLinks">
+          <NavLink to="/profile-page" exact={true} className='HeaderLinks'>{userName}</NavLink>
+          <NavLink to="/playlists" exact={true} className='HeaderLinks'>All Playlists</NavLink>
+          <NavLink to="/" exact={true} className='HeaderLinks'>Logout</NavLink>
+        </div>
 
       </header >
     );
