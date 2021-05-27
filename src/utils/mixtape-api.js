@@ -71,9 +71,18 @@ export async function addMixtape(mixtape) {
 
 export async function getMixtapeById(id) {
   const response = await request
-    .get(`api/mixtape/${id}`)
+    .get(`/api/mixtape/${id}`)
     .set('Authorization', window.localStorage.getItem('TOKEN'));
 
+  return response.body;
+}
+
+export async function getMixtapesByUserId(userId) {
+  console.log(userId);
+  const response = await request
+    .get(`/api/mixtape/user/${userId}`)
+    .set('Authorization', window.localStorage.getItem('TOKEN'));
+  console.log(response.body);
   return response.body;
 }
 
