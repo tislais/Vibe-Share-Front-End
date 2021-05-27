@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { addMixtape } from '../utils/mixtape-api';
 import './CreateMixTape.css';
+import { Carousel } from '3d-react-carousal';
 
 export default class CreateMixTape extends Component {
   state = {
@@ -8,6 +9,7 @@ export default class CreateMixTape extends Component {
     playlist_id: '',
     note: '',
     recipient: '',
+    slides: [<img src="/tapes/tape1.png" value="0" />, <img src="/tapes/tape2.png" value="1" />, <img src="/tapes/tape3.png" />, <img src="/tapes/tape4.png" />, <img src="/tapes/tape5.png" />, <img src="/tapes/tape6.png" />, <img src="/tapes/tape7.png" />, <img src="/tapes/tape8.png" />, <img src="/tapes/tape9.png" />, <img src="/tapes/tape10.png" />],
     theme: ''
   }
 
@@ -43,24 +45,46 @@ export default class CreateMixTape extends Component {
   }
 
   handleTheme = e => {
-    this.setState({ theme: e.target.value });
+    console.log(e.target.value);
+    this.setState({
+      theme: this.state.slides.filter((item, i) => {
+        console.log(i.toString() === e.target.value);
+        if (i.toString() === e.target.value) return item;
+        else return false;
+        // return i === e.target.value;
+      })
+    });
   }
 
-
+  handleClick = e => {
+    console.log(e);
+  }
 
   render() {
-    console.log(this.state.URL);
-
+    console.log(this.state.theme);
+    // let slides = [
+    //   <img src="/tapes/tape1.png" />, <img src="/tapes/tape2.png" />, <img src="/tapes/tape3.png" />, <img src="/tapes/tape4.png" />, <img src="/tapes/tape5.png" />, <img src="/tapes/tape6.png" />, <img src="/tapes/tape7.png" />, <img src="/tapes/tape8.png" />, <img src="/tapes/tape9.png" />, <img src="/tapes/tape10.png" />];
+    const { slides, theme } = this.state;
+    console.log(theme[0]);
     return (
       <div className="PlaylistPage">
         <form className="playListForm" onSubmit={this.handleSubmit}>
           <h2>Choose your Theme</h2>
+
+          <Carousel onClick={this.handleClick} slides={slides} autoplay={false} interval={1000} />
+          {theme ? theme : <img src='/tapes/tape1.png' />}
+          {/* <img src={this.state?.theme[0].img.src} alt='biscuit' /> */}
           <select name='theme' className='themeDrop'
             onChange={this.handleTheme}>
-            <option value="1">1</option>
+            {/* <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
-            <option value="4">4</option>
+            <option value="4">4</option> */}
+            {
+              slides.map((_, i) => {
+                return <option value={`${i}`}>{i}</option>;
+              })
+            }
           </select>
 
 
