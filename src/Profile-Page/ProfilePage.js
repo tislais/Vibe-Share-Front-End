@@ -8,7 +8,8 @@ export default class ProfilePage extends Component {
   state = {
     userName: '',
     userId: '',
-    mixtapes: []
+    mixtapes: [],
+    input: ''
   }
   //loading: false ???
 
@@ -16,7 +17,6 @@ export default class ProfilePage extends Component {
     try {
       const localStorageUserId = window.localStorage.getItem('USER_ID');
       const mixtapes = await getMixtapesByUserId(localStorageUserId);
-      console.log(mixtapes);
       this.setState({ mixtapes: mixtapes });
     }
     catch (err) {
@@ -34,12 +34,16 @@ export default class ProfilePage extends Component {
     history.push('/create-mixtape');
   }
 
+  handleChange = async (event) => {
+    this.setState({ input: event.target.value });
+  }
+
   render() {
 
     // if any mixtapes created, show them in a list
     // if not...
 
-    const { mixtapes } = this.state;
+    const { mixtapes, input } = this.state;
     const { userName } = this.props;
     return (
       <div className="ProfilePage">
@@ -47,6 +51,10 @@ export default class ProfilePage extends Component {
 
         {/*on click module appears. redirect to "create page"*/}
         <button id="createPlaylist" onClick={this.handleNav}> + Create new playlist</button>
+
+        Search for a playlist on YouTube: 
+        <input id="yt-search-input" value={this.state.value} onChange={this.handleChange}/><button id="yt-search-button" onClick={()=> window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist`, '_blank')}>Take me to YouTube</button>
+        
 
         {mixtapes
 
