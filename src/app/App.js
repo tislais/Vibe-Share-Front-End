@@ -38,7 +38,9 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Header userName={userName} />
+          { token ? <Header userName={userName} /> : <div className="container">
+            <div className="neon">Vibe Share</div>
+          </div>}
 
           <main>
 

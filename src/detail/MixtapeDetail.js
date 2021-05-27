@@ -13,10 +13,8 @@ export default class MixtapeDetail extends Component {
 
   async componentDidMount() {
     const { match } = this.props;
-    console.log(match);
     try {
       const mixtape = await getMixtapeById(match.params.id);
-      console.log(match.params.id);
       console.log(mixtape);
       this.setState({ mixtape: mixtape, playlist_id: mixtape[0].playlist_id });
     }
@@ -47,7 +45,7 @@ export default class MixtapeDetail extends Component {
     console.log(this.state.playlist_id);
     return (
       <div>
-        <iframe width="560" height="315" title="custom" src={`https://www.youtube.com/embed/videoseries?list=${playlistId}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" title="custom" src={`https://www.youtube.com/embed/videoseries?list=${playlistId.split('list=')[1]}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
       </div >
     );
