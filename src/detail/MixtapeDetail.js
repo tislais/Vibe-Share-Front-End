@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { getMixtapeById } from '../utils/mixtape-api';
-
-
+import './MixtapeDetail.css';
 
 export default class MixtapeDetail extends Component {
   state = {
     mixtape: [],
     playlist_id: ''
   };
-
-
 
   async componentDidMount() {
     const { match } = this.props;

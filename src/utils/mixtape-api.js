@@ -83,7 +83,16 @@ export async function getMixtapesByUserId(userId) {
   const response = await request
     .get(`/api/mixtape/user/${userId}`)
     .set('Authorization', window.localStorage.getItem('TOKEN'));
+    
+  return response.body;
+}
+
+export async function getAllMixtapes() {
+  const response = await request
+    .get('/api/mixtape/all')
+    .set('Authorization', window.localStorage.getItem('TOKEN'));
   console.log(response.body);
+
   return response.body;
 }
 

@@ -14,6 +14,7 @@ import './App.css';
 import CreateMixTape from '../playlist/CreateMixTape';
 import ProfilePage from '../Profile-Page/ProfilePage';
 import MixtapeDetail from '../detail/MixtapeDetail';
+import GlobalPlaylists from '../global/GlobalPlaylists';
 
 class App extends Component {
 
@@ -57,7 +58,7 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/playlists" exact={true}
+              <Route path="/" exact={true}
                 render={routerProps => (
                   token
                     ? <PlaylistPage {...routerProps} />
@@ -79,12 +80,17 @@ class App extends Component {
                 )}
               />
 
-
               <Route path="/profile-page" exact={true}
                 render={routerProps => (
                   token
                     ? <ProfilePage {...routerProps} userName={userName} />
                     : <Redirect to="/auth" />
+                )}
+              />
+
+              <Route path="/playlists" exact={true}
+                render={routerProps => (
+                  <GlobalPlaylists {...routerProps} />
                 )}
               />
 
