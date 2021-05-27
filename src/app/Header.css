@@ -50,23 +50,8 @@ h1 {
 
 
 
-.neon {
-  animation: neon 2s ease infinite;
-  -moz-animation: neon 2s ease infinite;
-  -webkit-animation: neon 2s ease infinite;
-}
 
-/* @keyframes neon {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #e900ff, 0 0 3vw #e900ff, 0 0 10vw #e900ff, 0 0 10vw #e900ff, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
-    color: #faeb2c;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #1685f8, 0 0 1.5vw #1685f8, 0 0 5vw #1685f8, 0 0 5vw #1685f8, 0 0 .2vw #1685f8, .5vw .5vw .1vw #40340A;
-    color: 	#f52789;
-  }
-} */
+
 
 a:link {
   color: #429dff;

@@ -57,6 +57,9 @@ export default class AuthPage extends Component {
 
     return (
       <div className="AuthPage">
+        <h1>
+          <div className="neon">Vibe Share</div>
+        </h1>
         <form onSubmit={this.handleSubmit}>
           {isSignUp && <p>
             <label>
@@ -83,18 +86,13 @@ export default class AuthPage extends Component {
             </label>
           </p>
 
-          <p>
-            <button type="submit">Sign {isSignUp ? 'Up' : 'In'}</button>
-          </p>
-
-          <p>
-            <button type="button" className="switch" onClick={this.handleSwitch}>
-              {isSignUp
-                ? 'Already have an account?'
-                : 'Need to create an account?'
-              }
-            </button>
-          </p>
+          <button type="submit">Sign {isSignUp ? 'Up' : 'In'}</button>
+          <div type="button" className="switch" onClick={this.handleSwitch}>
+            {isSignUp
+              ? 'Already have an account?'
+              : 'Need to create an account?'
+            }
+          </div>
 
           {error && <p>{error}</p>}
         </form>
