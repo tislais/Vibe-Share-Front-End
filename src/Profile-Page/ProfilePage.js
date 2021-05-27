@@ -1,6 +1,6 @@
 import { Component } from 'react';
-// import { Favorites } from './Favorites.js';
 import { getMixtapesByUserId } from '../utils/mixtape-api.js';
+
 import './ProfilePage.css';
 
 export default class ProfilePage extends Component {

@@ -3,6 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-image: linear-gradient( #e92efb, #ff2079, #440bde, #04005e); */
+  background-color: #222;
 }
 
 .AuthPage form {
