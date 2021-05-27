@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { getMixtapesByUserId } from '../utils/mixtape-api.js';
-
+import { Link } from 'react-router-dom';
 import './ProfilePage.css';
 
 export default class ProfilePage extends Component {
@@ -15,7 +15,7 @@ export default class ProfilePage extends Component {
   async componentDidMount() {
     try {
       const localStorageUserId = window.localStorage.getItem('USER_ID');
-      const mixtapes = await getMixtapesByUserId(localStorageUserId); 
+      const mixtapes = await getMixtapesByUserId(localStorageUserId);
       console.log(mixtapes);
       this.setState({ mixtapes: mixtapes });
     }
@@ -24,10 +24,10 @@ export default class ProfilePage extends Component {
     }
   }
 
-/*   getUserId = () => {
-    
-    this.setState({ userId: localStorageUserId });
-  } */
+  /*   getUserId = () => {
+      
+      this.setState({ userId: localStorageUserId });
+    } */
 
   handleNav = async () => {
     const { history } = this.props;
@@ -39,7 +39,8 @@ export default class ProfilePage extends Component {
     // if any mixtapes created, show them in a list
     // if not...
 
-    const { userName, mixtapes } = this.props;
+    const { mixtapes } = this.state;
+    const { userName } = this.props;
     return (
       <div className="ProfilePage">
         <h1>Welcome, {userName}</h1>
@@ -47,20 +48,24 @@ export default class ProfilePage extends Component {
         {/*on click module appears. redirect to "create page"*/}
         <button id="createPlaylist" onClick={this.handleNav}> + Create new playlist</button>
 
-        {mixtapes 
+        {mixtapes
 
           ? <ul id="my-mix-tapes">
             {mixtapes.map(mixtape => (
               <li key={mixtape.id}>
-                <span>{mixtape.title}</span>
-                <span>{mixtape.note}</span>
-                <span>{mixtape.recipient}</span>
+                <Link to={`/mixtape/${mixtape.id}`}>
+                  <span>{mixtape.title}</span>
+                  <span>{mixtape.note}</span>
+                  <span>{mixtape.recipient}</span>
+                </Link>
               </li>
             ))}
-          </ul> 
+          </ul>
           : <span>You haven't added a mixtape yet, slacker!</span>}
       </div>
 
-    );};
+    );
+  };
 
 }
+
