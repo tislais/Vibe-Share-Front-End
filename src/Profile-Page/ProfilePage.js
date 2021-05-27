@@ -39,7 +39,7 @@ export default class ProfilePage extends Component {
     // if any mixtapes created, show them in a list
     // if not...
 
-    const { userName, userId, mixtapes } = this.props;
+    const { userName, mixtapes } = this.props;
     return (
       <div className="ProfilePage">
         <h1>Welcome, {userName}</h1>
