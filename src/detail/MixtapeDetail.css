@@ -1,0 +1,20 @@
+.MixtapeDetail {
+  display: flex;
+  flex-direction: column;
+}
+
+.MixtapeTitle {
+  font-size: 2rem;
+}
+
+.MixtapeRecipient {
+  font-size: 1.8rem;
+}
+
+.MixtapeNote {
+  font-size: 1.5rem;
+}
+
+.MixtapeItems li {
+  margin: 20px;
+}
