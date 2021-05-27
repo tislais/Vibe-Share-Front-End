@@ -17,3 +17,5 @@ export default class MixtapeDetail extends Component {
 //console log what you get back
 //deconstruct state
 //create elements with {data.name}
+
+
