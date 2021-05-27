@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { addMixtape } from '../utils/mixtape-api';
 import './CreateMixTape.css';
-import { Carousel } from '3d-react-carousal';
+
 
 export default class CreateMixTape extends Component {
   state = {
