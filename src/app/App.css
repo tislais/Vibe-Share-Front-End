@@ -7,5 +7,7 @@
 main {
   background: #222;
   color:antiquewhite;
+  display: flex;
+  justify-content: center;
 }
 
