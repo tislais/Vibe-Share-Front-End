@@ -50,10 +50,12 @@ export default class ProfilePage extends Component {
         <h1>Welcome, {userName}</h1>
 
         {/*on click module appears. redirect to "create page"*/}
-        <button id="createPlaylist" onClick={this.handleNav}> + Create new playlist</button>
+        <button id="createPlaylist" onClick={this.handleNav}> + Create new mixtape</button>
 
         Search for a playlist on YouTube: 
-        <input id="yt-search-input" value={this.state.value} onChange={this.handleChange}/><button id="yt-search-button" onClick={()=> window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist`, '_blank')}>Take me to YouTube</button>
+        <input id="yt-search-input" value={this.state.value} onChange={this.handleChange}/><button id="yt-search-button" onClick={()=> window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist`, '_blank')}>Search YouTube</button>
+
+        <button id="yt-playlist-button" onClick={()=> window.open('https://www.youtube.com/feed/library', '_blank')}>See my playlists on YouTube</button>
         
 
         {mixtapes
