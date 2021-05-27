@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { addMixtape } from '../utils/mixtape-api';
 import './CreateMixTape.css';
-import { Carousel } from '3d-react-carousal';
+
 
 export default class CreateMixTape extends Component {
   state = {
@@ -71,7 +71,7 @@ export default class CreateMixTape extends Component {
         <form className="playListForm" onSubmit={this.handleSubmit}>
           <h2>Choose your Theme</h2>
 
-          <Carousel onClick={this.handleClick} slides={slides} autoplay={false} interval={1000} />
+          {/* <Carousel onClick={this.handleClick} slides={slides} autoplay={false} interval={1000} /> */}
           {theme ? theme : <img src='/tapes/tape1.png' alt='base' />}
           {/* <img src={this.state?.theme[0].img.src} alt='biscuit' /> */}
           <select name='theme' className='themeDrop'
