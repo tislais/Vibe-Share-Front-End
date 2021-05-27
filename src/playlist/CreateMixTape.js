@@ -9,7 +9,7 @@ export default class CreateMixTape extends Component {
     playlist_id: '',
     note: '',
     recipient: '',
-    slides: [<img src="/tapes/tape1.png" value="0" />, <img src="/tapes/tape2.png" value="1" />, <img src="/tapes/tape3.png" />, <img src="/tapes/tape4.png" />, <img src="/tapes/tape5.png" />, <img src="/tapes/tape6.png" />, <img src="/tapes/tape7.png" />, <img src="/tapes/tape8.png" />, <img src="/tapes/tape9.png" />, <img src="/tapes/tape10.png" />],
+    slides: [<img src="/tapes/tape1.png" value="0" alt='0' />, <img src="/tapes/tape2.png" value="1" alt='1' />, <img src="/tapes/tape3.png" alt='2' />, <img src="/tapes/tape4.png" alt='3' />, <img src="/tapes/tape5.png" alt='4' />, <img src="/tapes/tape6.png" alt='5' />, <img src="/tapes/tape7.png" alt='6' />, <img src="/tapes/tape8.png" alt='7' />, <img src="/tapes/tape9.png" alt='8' />, <img src="/tapes/tape10.png" alt='9' />],
     theme: ''
   }
 
@@ -72,7 +72,7 @@ export default class CreateMixTape extends Component {
           <h2>Choose your Theme</h2>
 
           <Carousel onClick={this.handleClick} slides={slides} autoplay={false} interval={1000} />
-          {theme ? theme : <img src='/tapes/tape1.png' />}
+          {theme ? theme : <img src='/tapes/tape1.png' alt='base' />}
           {/* <img src={this.state?.theme[0].img.src} alt='biscuit' /> */}
           <select name='theme' className='themeDrop'
             onChange={this.handleTheme}>
