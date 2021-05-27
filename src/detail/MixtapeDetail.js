@@ -30,25 +30,28 @@ export default class MixtapeDetail extends Component {
 
     return (
       <div className={`MixtapeDetail ${mixtape.theme}`}>
-        <div className="MixtapeTitle">
-          <p>{mixtape.title}</p>
-        </div>
-        <iframe width="560" height="315" title="custom" src={`https://www.youtube.com/embed/videoseries?list=${playlist_id}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div className="MixtapeDetailInner">
+          <div className="MixtapeTitle">
+            <p>{mixtape.title}</p>
+          </div>
+          <iframe width="600" height="315" title="custom" src={`https://www.youtube.com/embed/videoseries?list=${playlist_id}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-        <div className="MixtapeRecipient">
-          <p>For: {mixtape.recipient}</p>
-        </div>
 
-        <div className="MixtapeNote">
-          <p>{mixtape.note}</p>
-        </div>
+          
+          <div className="MixtapeNote">
+            <div className="MixtapeRecipient">
+              <p>For: {mixtape.recipient}</p>
+            </div>
+            <p>{mixtape.note}</p>
+          </div>
 
-        <div className="MixtapeItems">
-          {mixtapeItems.map(item => (
-            <li key={item.snippet.title}>
-              <span>{item.snippet.title}</span>
-            </li>
-          ))}
+          <div className="MixtapeItems">
+            {mixtapeItems.map(item => (
+              <li key={item.snippet.title}>
+                <span>{item.snippet.title}</span>
+              </li>
+            ))}
+          </div>
         </div>
       </div >
     );
