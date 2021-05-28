@@ -12,54 +12,54 @@ export default class CreateMixTape extends Component {
     slides: [
       {
         src: '/tapes/tape1.png',
-        id: 'tape-one',
-        alt: 'tape one'
+        id: 'Ursa-Major',
+        alt: 'Ursa-Major'
       },
       {
         src: '/tapes/tape2.png',
-        id: 'tape-two',
-        alt: 'tape-two'
+        id: 'Ophiuchus',
+        alt: 'Ophiuchus'
       },
       {
         src: '/tapes/tape3.png',
-        id: 'tape-three',
-        alt: 'tape-three'
+        id: 'Jupiter',
+        alt: 'Jupiter'
       },
       {
         src: '/tapes/tape4.png',
-        id: 'tape-four',
-        alt: 'tape-four'
+        id: 'Pleiades',
+        alt: 'Pleiades'
       },
       {
         src: '/tapes/tape5.png',
-        id: 'tape-five',
-        alt: 'tape-five'
+        id: 'Ceti-Alpha-5',
+        alt: 'Ceti-Alpha-5'
       },
       {
         src: '/tapes/tape6.png',
-        id: 'tape-six',
-        alt: 'tape-six'
+        id: 'Zeta-Reticuli',
+        alt: 'Zeta-Reticuli'
       },
       {
         src: '/tapes/tape7.png',
-        id: 'tape-seven',
-        alt: 'tape-seven'
+        id: 'Shai-Hulud',
+        alt: 'Shai-Hulud'
       },
       {
         src: '/tapes/tape8.png',
-        id: 'tape-eight',
-        alt: 'tape-eight'
+        id: 'Stardust',
+        alt: 'Stardust'
       },
       {
         src: '/tapes/tape9.png',
-        id: 'tape-nine',
-        alt: 'tape-nine'
+        id: 'Omega',
+        alt: 'Omega'
       }
     ],
     theme: {
       src: '/tapes/tape1.png',
-      id: 0,
-      alt: 0
+      id: 'Ursa-Major',
+      alt: 'Ursa-Major'
     }
   }
 

@@ -48,3 +48,50 @@
 iframe {
   margin: 40px auto;
 }
+
+/* THEME STYLES HERE */
+
+.Ursa-Major {
+  background-color: rgb(235, 0, 176);
+}
+
+.Ursa-Major .MixtapeTitle {
+  background-color: yellow;
+}
+
+.Ursa-Major .title {
+  color: rgb(255, 255, 255);
+  background-color:rgb(235, 0, 176);
+}
+
+/* .Ophiuchus {
+
+}
+
+.Jupiter {
+
+}
+
+.Pleiades {
+
+}
+
+.Ceti-Alpha-5 {
+
+}
+
+.Zeta-Reticuli {
+
+}
+
+.Shai-Hulud {
+
+}
+
+.Stardust {
+
+}
+
+.Omega {
+
+} */
