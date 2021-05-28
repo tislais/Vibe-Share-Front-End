@@ -1,0 +1,18 @@
+h1 {
+    padding: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    display: inline;
+}
+
+.portraits{
+    width: 100px;
+    height: 130px;
+}
+
+p {
+font-size: 12px;
+padding: 12px;
+}

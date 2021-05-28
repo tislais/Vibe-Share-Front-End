@@ -15,6 +15,7 @@ import CreateMixTape from '../playlist/CreateMixTape';
 import ProfilePage from '../Profile-Page/ProfilePage';
 import MixtapeDetail from '../detail/MixtapeDetail';
 import GlobalPlaylists from '../global/GlobalPlaylists';
+import About from '../about/About';
 
 class App extends Component {
 
@@ -95,6 +96,14 @@ class App extends Component {
                   <GlobalPlaylists {...routerProps} />
                 )}
               />
+
+              <Route path="/about" exact={true}
+                render={routerProps => (
+                  <About {...routerProps} />
+                )}
+              />
+
+              
 
               <Redirect to="/" />
 
