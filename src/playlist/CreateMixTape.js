@@ -11,49 +11,54 @@ export default class CreateMixTape extends Component {
     recipient: '',
     slides: [
       {
-        src: '/tapes/tape1.png',
+        src: '/tapes/Ursa-Major.png',
         id: 'Ursa-Major',
         alt: 'Ursa-Major'
       },
       {
-        src: '/tapes/tape2.png',
+        src: '/tapes/Ophiuchus.png',
         id: 'Ophiuchus',
         alt: 'Ophiuchus'
       },
       {
-        src: '/tapes/tape3.png',
+        src: '/tapes/Jupiter.png',
         id: 'Jupiter',
         alt: 'Jupiter'
       },
       {
-        src: '/tapes/tape4.png',
+        src: '/tapes/Pleiades.png',
         id: 'Pleiades',
         alt: 'Pleiades'
       },
       {
-        src: '/tapes/tape5.png',
+        src: '/tapes/Ceti-Alpha-5.png',
         id: 'Ceti-Alpha-5',
         alt: 'Ceti-Alpha-5'
       },
       {
-        src: '/tapes/tape6.png',
+        src: '/tapes/Zeta-Reticuli.png',
         id: 'Zeta-Reticuli',
         alt: 'Zeta-Reticuli'
       },
       {
-        src: '/tapes/tape7.png',
+        src: '/tapes/Shai-Hulud.png',
         id: 'Shai-Hulud',
         alt: 'Shai-Hulud'
       },
       {
-        src: '/tapes/tape8.png',
+        src: '/tapes/Stardust.png',
         id: 'Stardust',
         alt: 'Stardust'
       },
       {
-        src: '/tapes/tape9.png',
+        src: '/tapes/Omega.png',
         id: 'Omega',
         alt: 'Omega'
+      },
+      {
+        src: '/tapes/Vulpecula.png',
+        id: 'Vulpecula',
+        alt: 'Vulpecula'
       }
     ],
     theme: {
