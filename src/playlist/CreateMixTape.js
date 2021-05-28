@@ -116,10 +116,10 @@ export default class CreateMixTape extends Component {
     return (
       <div className="PlaylistPage">
         <form className="playListForm" onSubmit={this.handleSubmit}>
-          <h2>Choose your Theme</h2>
           {
             theme ? <img src={theme.src} alt={theme.alt} /> : <img src="/tapes/tape1.png" alt="0" />
           }
+          <h2>Theme</h2>
           <select name='theme' className='themeDrop'
             onChange={this.handleTheme}>
             {
@@ -132,37 +132,37 @@ export default class CreateMixTape extends Component {
 
           <p>
             <label>
-              <span>Playlist</span>
-              <input className="playListForm" placeholder="Title of Playlist" onChange={this.handleTitle} value={this.state.title} />
+              <span>Mixtape Title</span>
+              <input className="playListForm" placeholder="Mixtape Title..." onChange={this.handleTitle} value={this.state.title} />
 
             </label>
           </p>
 
           <p>
             <label>
-              <span>YouTube Link</span>
-              <input className="youTubeLink" placeholder="YouTube Link" onChange={this.handleURL} value={this.state.URL} />
+              <span>YouTube Playlist URL</span>
+              <input className="youTubeLink" placeholder="YouTube Playlist URL..." onChange={this.handleURL} value={this.state.URL} />
 
             </label>
           </p>
 
           <p>
             <label>
-              <span>Playlist Description</span>
-              <input className="playListDescription" placeholder="PlayList Description" onChange={this.handleDescription} value={this.state.description} />
+              <span>Addressed to</span>
+              <input className="playListSendTo" placeholder="Addressed to..." onChange={this.handleSendTo} value={this.state.recipient} />
 
             </label>
           </p>
 
           <p>
             <label>
-              <span>Recipient</span>
-              <input className="playListSendTo" placeholder="PlayList Send To" onChange={this.handleSendTo} value={this.state.recipient} />
+              <span>Personal note</span>
+              <textarea maxlength="500" className="playListDescription" placeholder="Personal note..." onChange={this.handleDescription} value={this.state.description} />
 
             </label>
           </p>
 
-          <button>Add</button>
+          <button>Finish</button>
         </form >
 
       </div>
