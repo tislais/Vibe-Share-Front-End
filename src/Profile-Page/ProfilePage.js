@@ -50,23 +50,28 @@ export default class ProfilePage extends Component {
         <h1>Welcome, {userName}</h1>
 
         {/*on click module appears. redirect to "create page"*/}
-        <button id="createPlaylist" onClick={this.handleNav}> + Create new mixtape</button>
+        <button id="createPlaylist" onClick={this.handleNav}> + Create Mixtape</button>
 
-        Search for a playlist on YouTube: 
-        <input id="yt-search-input" value={this.state.value} onChange={this.handleChange}/><button id="yt-search-button" onClick={()=> window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist`, '_blank')}>Search YouTube</button>
+        <p>You will need a Youtube playlist URL to create a mixtape!</p>
 
-        <button id="yt-playlist-button" onClick={()=> window.open('https://www.youtube.com/feed/library', '_blank')}>See my playlists on YouTube</button>
+        <span>Find a playlist on Youtube:</span>
+        <div className="Search">
+          <input id="yt-search-input" value={this.state.value} onChange={this.handleChange}/><button id="yt-search-button" onClick={()=> window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist`, '_blank')}>Search YouTube</button>
+        </div>
+
+        <span>Find a playlist you've already created:</span>
+        <div id="yt-playlist-button" onClick={()=> window.open('https://www.youtube.com/feed/library', '_blank')}>See my playlists on YouTube</div>
         
 
         {mixtapes
-
-          ? <ul id="my-mix-tapes">
+          ? 
+          <ul id="MyMixtapes">
+            <h2>My Mixtapes:</h2>
             {mixtapes.map(mixtape => (
               <li key={mixtape.id}>
                 <Link to={`/mixtape/${mixtape.id}`}>
+                  <span>For: {mixtape.recipient}</span>
                   <span>{mixtape.title}</span>
-                  <span>{mixtape.note}</span>
-                  <span>{mixtape.recipient}</span>
                 </Link>
               </li>
             ))}

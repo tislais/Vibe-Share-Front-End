@@ -79,3 +79,9 @@
 .AuthPage .switch:hover {
   color: #f52789;
 }
+
+.Error {
+  color: #ee2222;
+  text-align: center;
+  margin-top: 20px;
+}
