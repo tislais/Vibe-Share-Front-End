@@ -32,6 +32,11 @@ class App extends Component {
 
     this.setState({ token: user.token, userId: user.id, userName: user.name });
   }
+  
+  handleLogout = () => {
+    window.localStorage.clear();
+    this.setState({ token: null, userId: null, userName: null });
+  };
 
   render() {
     const { token, userName } = this.state;
@@ -40,7 +45,7 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          { token && <Header userName={userName} /> }
+          { token && <Header onLogout={this.handleLogout} userName={userName} /> }
 
           <main>
 
