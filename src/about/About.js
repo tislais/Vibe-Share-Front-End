@@ -1,39 +1,50 @@
 import { Component } from 'react';
-
-// import './Home.css';
 import './About.css';
 
 export default class About extends Component {
-  
+
   render() {
     return (
       <div className="About">
         <h1>About us</h1>
 
-        {/* <ul>
-          <li>Tis </li>
-          <li>Taylor</li>
-          <li>Christiane</li>
-          <li>Austi</li>
-        </ul> */}
+        <div className="border">
+          <div className="container">
 
-        <h3> Tis</h3>
-        <img src="" alt="" class="portaits"/>
-        <p> this is my about me. write here! </p>
+            <div className="person">
+              <h3> Tis</h3>
+              <img src="/ports/tis.jpg" alt='Tis' className="portraits" />
+              <p> this is my about me. write here! this is my about me. write here! this is my about me. write here!
+              this is my about me. write here! this is my about me. write here! this is my about me. write here!
+          this is my about me. write here! this is my about me. write here! this is my about me. write here! </p>
+            </div>
 
-        <h3> Taylor</h3>
-        <img src="" alt="" class="portaits"/>
-        <p> this is my about me. write here! </p>
+            <div className="person">
+              <h3> Taylor</h3>
+              <img src="/ports/taylor.jpg" alt='Taylor' className="portraits" />
+              <p> this is my about me. write here! this is my about me. write here! this is my about me. write here!
+              this is my about me. write here! this is my about me. write here! this is my about me. write here!
+          this is my about me. write here! this is my about me. write here! this is my about me. write here! </p>
+            </div>
 
-        <h3> Christiane</h3>
-        <img src="" alt="" class="portaits"/>
-        <p> this is my about me. write here! </p>
+            <div className="person">
+              <h3> Christiane</h3>
+              <img src="/ports/christiane.jpg" alt='Christiane' className="portraits" />
+              <p> this is my about me. write here! this is my about me. write here! this is my about me. write here!
+              this is my about me. write here! this is my about me. write here! this is my about me. write here!
+          this is my about me. write here! this is my about me. write here! this is my about me. write here! </p>
+            </div>
 
-        <h3> Austi</h3>
-        <img src="" alt="" class="portaits"/>
-        <p>this is my about me. write here! </p>
-       
+            <div className="person">
+              <h3> Austi</h3>
+              <img src="/ports/austi.jpg" alt='Austi' className="portraits" />
+              <p>this is my about me. write here! this is my about me. write here! this is my about me. write here!
+              this is my about me. write here! this is my about me. write here! this is my about me. write here!
+          this is my about me. write here! this is my about me. write here! this is my about me. write here! </p>
+            </div>
 
+          </div>
+        </div>
 
       </div>
     );
