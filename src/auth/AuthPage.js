@@ -65,7 +65,7 @@ export default class AuthPage extends Component {
             <label>
               <span>Name</span>
               <input name="name" value={name} required={true}
-                onChange={this.handleNameChange}
+                onChange={this.handleNameChange} placeholder="Name"
               />
             </label>
           </p>}
@@ -74,15 +74,15 @@ export default class AuthPage extends Component {
             <label>
               <span>Email</span>
               <input name="email" required={true}
-                value={email} onChange={this.handleEmailChange} />
+                value={email} onChange={this.handleEmailChange} placeholder="Email Address" />
             </label>
           </p>
 
           <p>
             <label>
               <span>Password</span>
-              <input name="email" type="password" required={true}
-                value={password} onChange={this.handlePasswordChange} />
+              <input name="password" type="password" required={true}
+                value={password} onChange={this.handlePasswordChange} placeholder="Password" />
             </label>
           </p>
 
