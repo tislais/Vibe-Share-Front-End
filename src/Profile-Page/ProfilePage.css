@@ -16,7 +16,7 @@
   border: 0;
   outline: 0;
   font-weight: bold;
-  margin: 20px auto;
+  margin: 50px auto;
   background: #009088;
   color: white;
   border-bottom: 6px solid #005c57;
@@ -30,7 +30,7 @@
 
 .ProfilePage p {
   text-align: center;
-  margin: 40px 0;
+  margin-bottom: 40px;
 }
 
 .ProfilePage span {
@@ -39,12 +39,14 @@
 
 .ProfilePage .Search {
   display: grid;
-  grid-template-columns: 1fr 150px;
+  grid-template-columns: 1fr 100px;
   margin-bottom: 30px;
 }
 
 #MyMixtapes li {
-  margin: 20px;
+  margin: 19px 0;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  padding-bottom: 20px;
 }
 
 #MyMixtapes li a {
@@ -57,7 +59,7 @@
   margin: 5px;
 }
 
-#MyMixtapes h2 {
+.ProfilePage h2 {
   margin-top: 40px;
   border-bottom: 1px solid rgba(255,255,255,.2);
   padding-bottom: 10px;
@@ -68,7 +70,8 @@
   border: 0;
   outline: 0;
   background-color: #fad835;
-  padding: 5px 10px;
+  padding: 10px 10px;
+  font-size: 1rem;
 }
 
 #yt-search-button {
@@ -76,13 +79,23 @@
   border: 0;
   outline: 0;
   color: white;
+  font-size: 1rem;
+}
+
+#yt-search-button:hover {
+  background-color: #c22240;
 }
 
 #yt-playlist-button {
   cursor: pointer;
   color: #429dff;
+  text-align: center;
 }
 
 #yt-playlist-button:hover {
   color: #f52789;
+}
+
+.ProfilePage .Slacker {
+  text-align: center;
 }

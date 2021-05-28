@@ -50,23 +50,21 @@ export default class ProfilePage extends Component {
         <h1>Welcome, {userName}</h1>
 
         {/*on click module appears. redirect to "create page"*/}
-        <button id="createPlaylist" onClick={this.handleNav}> + Create Mixtape</button>
 
-        <p>You will need a Youtube playlist URL to create a mixtape!</p>
+        <p>Grab a YouTube playlist URL!</p>
 
-        <span>Find a playlist on Youtube:</span>
         <div className="Search">
-          <input id="yt-search-input" value={this.state.value} onChange={this.handleChange}/><button id="yt-search-button" onClick={()=> window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist&sp=EgIQAw%253D%253D`, '_blank')}>Search YouTube</button>
+          <input id="yt-search-input" value={this.state.value} onChange={this.handleChange} placeholder="Find a playlist on YouTube"/><button id="yt-search-button" onClick={()=> window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist&sp=EgIQAw%253D%253D`, '_blank')}>Search</button>
         </div>
 
-        <span>Find a playlist you've already created:</span>
-        <div id="yt-playlist-button" onClick={()=> window.open('https://www.youtube.com/feed/library', '_blank')}>See my playlists on YouTube</div>
+        <div id="yt-playlist-button" onClick={()=> window.open('https://www.youtube.com/feed/library', '_blank')}>Already created a playlist?</div>
         
+        <button id="createPlaylist" onClick={this.handleNav}> + Create Mixtape</button>
 
+        <h2>My Mixtapes:</h2>
         {mixtapes
-          ? 
+          ?
           <ul id="MyMixtapes">
-            <h2>My Mixtapes:</h2>
             {mixtapes.map(mixtape => (
               <li key={mixtape.id}>
                 <Link to={`/mixtape/${mixtape.id}`}>
@@ -76,7 +74,7 @@ export default class ProfilePage extends Component {
               </li>
             ))}
           </ul>
-          : <span>You haven't added a mixtape yet, slacker!</span>}
+          : <span className="Slacker">You haven't added a mixtape yet, slacker!</span>}
       </div>
 
     );
