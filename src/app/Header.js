@@ -4,12 +4,9 @@ import './Header.css';
 
 class Header extends Component {
 
-  handleLogout = () => {
-    window.localStorage.clear();
-  };
 
   render() {
-    const { userName } = this.props;
+    const { userName, onLogout } = this.props;
     return (
       <header className="Header">
         <div className="neon">Vibe Share</div>
@@ -17,7 +14,7 @@ class Header extends Component {
           <NavLink to="/profile-page" exact={true} className='HeaderLinks'>{userName}</NavLink>
           <NavLink to="/playlists" exact={true} className='HeaderLinks'>All Mixtapes</NavLink>
           <NavLink to="/about" exact={true} className='HeaderLinks'>About Us</NavLink>
-          <NavLink to="/" exact={true} className='HeaderLinks' onClick={this.handleLogout}>Logout</NavLink>
+          <NavLink to="/" exact={true} className='HeaderLinks' onClick={onLogout}>Logout</NavLink>
         </div>
 
       </header >
