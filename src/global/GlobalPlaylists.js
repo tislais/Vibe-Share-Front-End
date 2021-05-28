@@ -24,8 +24,9 @@ export default class GlobalPlaylists extends Component {
       <div className="GlobalPlaylists">
         <ul id="all-mix-tapes">
           {(this.state.mixtapes).map(mixtape => (
-            <li key={mixtape.id}>
+            <li key={mixtape.id} className={mixtape.theme}>
               <Link to={`/mixtape/${mixtape.id}`}>
+                <img src={`/tapes/${mixtape.theme}.png`} alt="alt" />
                 <span>{mixtape.title}</span>
               </Link>
             </li>
