@@ -171,18 +171,18 @@ iframe {
 
 .Vulpecula
  {
-  background-color: rgb(131, 98, 14);
+  background-color: antiquewhite;
   
 }
 
 .Vulpecula
  .MixtapeTitle {
-  background-color: antiquewhite;
+  background-color: rgb(131, 98, 14);
 }
 
 .Vulpecula
  .title {
   color: rgb(34, 33, 33);
-  background-color:rgb(131, 98, 14);
+  background-color:antiquewhite;
   
 }
