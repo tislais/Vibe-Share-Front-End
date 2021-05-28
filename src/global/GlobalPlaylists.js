@@ -29,7 +29,6 @@ export default class GlobalPlaylists extends Component {
                 <span>{mixtape.title}</span>
               </Link>
             </li>
-
           ))}
 
         </ul>
