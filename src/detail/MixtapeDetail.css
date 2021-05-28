@@ -48,7 +48,7 @@
   color: rgba(0,0,0,.8);
   font-weight: 800;
   letter-spacing: 2px;
-  margin-top: 50px;
+  margin: 60px 0;
 }
 
 .MixtapeItems li { 
@@ -65,7 +65,7 @@ iframe {
 }
 
 .MixtapeDetail .title {
-  padding: 10px;
+  padding: 20px;
   font-weight: bold;
 }
 
@@ -73,7 +73,9 @@ iframe {
 
 
 .MixtapeDetail.Ursa-Major {
-  background-color: rgb(235, 0, 176);
+  background: rgb(235,0,176);
+background: linear-gradient(75deg, rgba(235,0,176,1) 0%, rgba(255,253,127,1) 90%);
+  background-attachment: fixed;
 }
 
 .MixtapeDetail.Ursa-Major .MixtapeTitle {
@@ -86,7 +88,9 @@ iframe {
 }
 
 .MixtapeDetail.Ophiuchus {
-  background-color: rgb(134, 207, 91);
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(134,207,91,1) 70%);
+  background-attachment: fixed;
 }
 
 .MixtapeDetail.Ophiuchus .MixtapeTitle {
@@ -95,11 +99,12 @@ iframe {
 
 .MixtapeDetail.Ophiuchus .title {
   color: rgb(255, 255, 255);
-  background-color:rgb(134, 207, 91);
 }
 
 .MixtapeDetail.Jupiter {
-  background-color: rgb(218, 45, 83);
+  background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(218,45,83,1) 70%);
+  background-attachment: fixed;
 }
 
 .MixtapeDetail.Jupiter .MixtapeTitle {
@@ -114,6 +119,7 @@ iframe {
 .MixtapeDetail.Pleiades {
   background: rgb(61,204,240);
   background: linear-gradient(75deg, rgba(61,204,240,1) 15%, rgba(149,120,255,1) 67%, rgba(250,235,215,1) 100%);
+  background-attachment: fixed;
 }
 
 .MixtapeDetail.Pleiades .MixtapeTitle {
@@ -126,7 +132,9 @@ iframe {
 }
 
 .MixtapeDetail.Ceti-Alpha-5 {
-  background-color: rgb(24, 23, 23);
+  background: rgb(189,45,45);
+background: linear-gradient(0deg, rgba(189,45,45,1) 0%, rgba(34,34,34,1) 100%);
+  background-attachment: fixed;
 }
 
 .MixtapeDetail.Ceti-Alpha-5 .MixtapeTitle {
@@ -139,7 +147,9 @@ iframe {
 }
 
 .MixtapeDetail.Zeta-Reticuli {
-  background-color: antiquewhite;
+  background: rgb(189,41,41);
+background: linear-gradient(0deg, rgba(189,41,41,1) 0%, rgba(255,255,255,1) 70%);
+  background-attachment: fixed;
 }
 
 .MixtapeDetail.Zeta-Reticuli .MixtapeTitle {
@@ -152,7 +162,9 @@ iframe {
 }
 
 .MixtapeDetail.Shai-Hulud {
-  background-color: rgb(34, 33, 33);
+  background: rgb(34,34,34);
+background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(252,192,42,1) 100%);
+  background-attachment: fixed;
 }
 
 .MixtapeDetail.Shai-Hulud .MixtapeTitle {
@@ -165,7 +177,9 @@ iframe {
 }
 
 .MixtapeDetail.Stardust {
-  background-color: antiquewhite;
+  background: rgb(197,63,63);
+background: linear-gradient(0deg, rgba(197,63,63,1) 0%, rgba(202,247,188,1) 70%);
+background-attachment: fixed;
 }
 
 .MixtapeDetail.Stardust .MixtapeTitle {
@@ -178,7 +192,9 @@ iframe {
 }
 
 .MixtapeDetail.Omega {
-  background-color: rgb(248, 230, 71);
+  background: rgb(248,230,71);
+background: linear-gradient(0deg, rgba(248,230,71,1) 0%, rgba(176,239,255,1) 100%);
+  background-attachment: fixed;
   
 }
 
@@ -195,7 +211,7 @@ iframe {
 .MixtapeDetail.Vulpecula
  {
   background-color: antiquewhite;
-  
+  background-attachment: fixed;
 }
 
 .MixtapeDetail.Vulpecula
