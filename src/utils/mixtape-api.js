@@ -88,7 +88,7 @@ export async function getMixtapesByUserId(userId) {
 
 export async function getAllMixtapes() {
   const response = await request
-    .get('/api/mixtape/all')
+    .get('/api/mixtapes/all')
     .set('Authorization', window.localStorage.getItem('TOKEN'));
   console.log(response.body);
 
@@ -107,5 +107,6 @@ export async function getMixtapeItemsById(id) {
   const response = await request
     .get(`/api/playlistItems/${id}`)
     .set('Authorization', window.localStorage.getItem('TOKEN'));
+  console.log(response);
   return response.body;
 }
