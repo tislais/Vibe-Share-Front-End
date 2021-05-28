@@ -17,6 +17,7 @@ class Header extends Component {
           <NavLink to="/profile-page" exact={true} className='HeaderLinks'>{userName}</NavLink>
           <NavLink to="/playlists" exact={true} className='HeaderLinks'>All Playlists</NavLink>
           <NavLink to="/" exact={true} className='HeaderLinks' onClick={this.handleLogout}>Logout</NavLink>
+          <NavLink to="/about" exact={true} className='HeaderLinks'>About Us</NavLink>
         </div>
 
       </header >
