@@ -50,137 +50,137 @@ iframe {
 }
 
 
-.Ursa-Major {
+.MixtapeDetail.Ursa-Major {
   background-color: rgb(235, 0, 176);
 }
 
-.Ursa-Major .MixtapeTitle {
+.MixtapeDetail.Ursa-Major .MixtapeTitle {
   background-color: yellow;
 }
 
-.Ursa-Major .title {
+.MixtapeDetail.Ursa-Major .title {
   color: rgb(255, 255, 255);
   background-color:rgb(235, 0, 176);
 }
 
-.Ophiuchus {
+.MixtapeDetail.Ophiuchus {
   background-color: rgb(134, 207, 91);
 }
 
-.Ophiuchus .MixtapeTitle {
+.MixtapeDetail.Ophiuchus .MixtapeTitle {
   background-color: rgb(17, 15, 15);
 }
 
-.Ophiuchus .title {
+.MixtapeDetail.Ophiuchus .title {
   color: rgb(255, 255, 255);
   background-color:rgb(134, 207, 91);
 }
 
-.Jupiter {
+.MixtapeDetail.Jupiter {
   background-color: rgb(218, 45, 83);
 }
 
-.Jupiter .MixtapeTitle {
+.MixtapeDetail.Jupiter .MixtapeTitle {
   background-color: whitesmoke;
 }
 
-.Jupiter .title {
+.MixtapeDetail.Jupiter .title {
   color: black;
   background-color:rgb(218, 45, 83);
 }
 
-.Pleiades {
+.MixtapeDetail.Pleiades {
   background-color: rgb(61, 204, 240);
 }
 
-.Pleiades .MixtapeTitle {
+.MixtapeDetail.Pleiades .MixtapeTitle {
   background-color: rgb(26, 25, 25)
 }
 
-.Pleiades .title {
+.MixtapeDetail.Pleiades .title {
   color: black;
   background-color:antiquewhite;
 }
 
-.Ceti-Alpha-5 {
+.MixtapeDetail.Ceti-Alpha-5 {
   background-color: rgb(24, 23, 23);
 }
 
-.Ceti-Alpha-5 .MixtapeTitle {
+.MixtapeDetail.Ceti-Alpha-5 .MixtapeTitle {
   background-color: rgb(189, 45, 45);
 }
 
-.Ceti-Alpha-5 .title {
+.MixtapeDetail.Ceti-Alpha-5 .title {
   color: white;
   background-color:rgb(153, 148, 148);
 }
 
-.Zeta-Reticuli {
+.MixtapeDetail.Zeta-Reticuli {
   background-color: antiquewhite;
 }
 
-.Zeta-Reticuli .MixtapeTitle {
+.MixtapeDetail.Zeta-Reticuli .MixtapeTitle {
   background-color: rgb(189, 41, 41);
 }
 
-.Zeta-Reticuli .title {
+.MixtapeDetail.Zeta-Reticuli .title {
   color: white;
   background-color:rgb(54, 54, 54);
 }
 
-.Shai-Hulud {
+.MixtapeDetail.Shai-Hulud {
   background-color: rgb(34, 33, 33);
 }
 
-.Shai-Hulud .MixtapeTitle {
+.MixtapeDetail.Shai-Hulud .MixtapeTitle {
   background-color: rgb(252, 192, 42);
 }
 
-.Shai-Hulud .title {
+.MixtapeDetail.Shai-Hulud .title {
   color: rgb(34, 33, 33);
   background-color:antiquewhite
 }
 
-.Stardust {
+.MixtapeDetail.Stardust {
   background-color: antiquewhite;
 }
 
-.Stardust .MixtapeTitle {
+.MixtapeDetail.Stardust .MixtapeTitle {
   background-color: rgb(140, 243, 108);
 }
 
-.Stardust .title {
+.MixtapeDetail.Stardust .title {
   color: rgb(34, 33, 33);
   background-color:rgb(197, 63, 63);
 }
 
-.Omega {
+.MixtapeDetail.Omega {
   background-color: rgb(248, 230, 71);
   
 }
 
-.Omega .MixtapeTitle {
+.MixtapeDetail.Omega .MixtapeTitle {
   background-color: antiquewhite;
 }
 
-.Omega .title {
+.MixtapeDetail.Omega .title {
   color: rgb(34, 33, 33);
   background-color:rgb(176, 239, 255);
   
 }
 
-.Vulpecula
+.MixtapeDetail.Vulpecula
  {
   background-color: antiquewhite;
   
 }
 
-.Vulpecula
+.MixtapeDetail.Vulpecula
  .MixtapeTitle {
   background-color: rgb(131, 98, 14);
 }
 
-.Vulpecula
+.MixtapeDetail.Vulpecula
  .title {
   color: rgb(34, 33, 33);
   background-color:antiquewhite;

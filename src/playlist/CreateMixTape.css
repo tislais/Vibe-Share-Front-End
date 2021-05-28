@@ -1,3 +1,63 @@
-.hide {
+.CreateMixtapePage {
+
+}
+
+.CreateMixtapePage .hide {
   display:none
 }
+
+.CreateMixtapeForm {
+  margin-top: 60px;
+  width: 600px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CreateMixtapeForm img {
+  width: 360px;
+  height: 230px;
+  object-fit: cover;
+  margin-bottom: 60px;
+}
+
+.CreateMixtapeForm .Ursa-Major {
+  box-shadow: 10px 10px 0px 0px #fef41d, 20px 20px 0px 0px #ef2a79;
+}
+
+.CreateMixtapeForm .Ophiuchus {
+  box-shadow: 10px 10px 0px 0px rgb(134, 207, 91), 20px 20px 0px 0px rgb(17, 15, 15);
+}
+
+.CreateMixtapeForm .Jupiter {
+  box-shadow: 10px 10px 0px 0px whitesmoke, 20px 20px 0px 0px rgb(218, 45, 83);
+}
+
+.CreateMixtapeForm .Pleiades {
+  box-shadow: 10px 10px 0px 0px antiquewhite, 20px 20px 0px 0px rgb(61, 204, 240);
+}
+
+.CreateMixtapeForm .Ceti-Alpha-5 {
+  box-shadow: 10px 10px 0px 0px rgb(153, 148, 148), 20px 20px 0px 0px rgb(189, 45, 45);
+}
+
+.CreateMixtapeForm .Zeta-Reticuli {
+  box-shadow: 10px 10px 0px 0px antiquewhite, 20px 20px 0px 0px rgb(189, 41, 41);
+}
+
+.CreateMixtapeForm .Shai-Hulud {
+  box-shadow: 10px 10px 0px 0px rgb(252, 192, 42), 20px 20px 0px 0px rgb(20 20 20);
+}
+
+.CreateMixtapeForm .Stardust {
+  box-shadow: 10px 10px 0px 0px rgb(140, 243, 108), 20px 20px 0px 0px rgb(197, 63, 63);
+}
+
+.CreateMixtapeForm .Omega {
+  box-shadow: 10px 10px 0px 0px rgb(176, 239, 255), 20px 20px 0px 0px rgb(248, 230, 71);
+}
+
+.CreateMixtapeForm .Vulpecula {
+  box-shadow: 10px 10px 0px 0px antiquewhite, 20px 20px 0px 0px rgb(131, 98, 14);
+}
+

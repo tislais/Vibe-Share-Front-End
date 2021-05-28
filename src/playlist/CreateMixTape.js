@@ -51,18 +51,18 @@ export default class CreateMixTape extends Component {
         alt: 'Stardust'
       },
       {
-        src: '/tapes/Omega.png',
-        id: 'Omega',
-        alt: 'Omega'
-      },
-      {
         src: '/tapes/Vulpecula.png',
         id: 'Vulpecula',
         alt: 'Vulpecula'
+      },
+      {
+        src: '/tapes/Omega.png',
+        id: 'Omega',
+        alt: 'Omega'
       }
     ],
     theme: {
-      src: '/tapes/tape1.png',
+      src: '/tapes/Ursa-Major.png',
       id: 'Ursa-Major',
       alt: 'Ursa-Major'
     }
@@ -119,10 +119,10 @@ export default class CreateMixTape extends Component {
   render() {
     const { slides, theme } = this.state;
     return (
-      <div className="PlaylistPage">
-        <form className="playListForm" onSubmit={this.handleSubmit}>
+      <div className="CreateMixtapePage">
+        <form className="CreateMixtapeForm" onSubmit={this.handleSubmit}>
           {
-            theme ? <img src={theme.src} alt={theme.alt} /> : <img src="/tapes/tape1.png" alt="0" />
+            theme ? <img src={theme.src} alt={theme.alt} className={theme.alt}/> : <img src="/tapes/Ursa-Major.png" alt="booty" />
           }
           <h2>Theme</h2>
           <select name='theme' className='themeDrop'
