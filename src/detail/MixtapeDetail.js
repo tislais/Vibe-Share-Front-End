@@ -40,7 +40,7 @@ export default class MixtapeDetail extends Component {
 
           <div className="MixtapeNote">
             <div className="MixtapeRecipient">
-              <p>For: {mixtape.recipient}</p>
+              For: {mixtape.recipient}
             </div>
             <p>{mixtape.note}</p>
           </div>

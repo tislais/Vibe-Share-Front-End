@@ -39,8 +39,9 @@
 
 .ProfilePage .Search {
   display: grid;
-  grid-template-columns: 1fr 100px;
-  margin-bottom: 30px;
+  grid-template-columns: 1fr 50px;
+  width: 300px;
+  margin: 0 auto 30px;
 }
 
 #MyMixtapes li {

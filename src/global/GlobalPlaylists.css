@@ -1,2 +1,80 @@
-.GlobalPlaylists .Ursa-Major {
+.GlobalPlaylists {
+  padding: 60px;
+  width: 920px;
 }
+
+.GlobalPlaylists ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.GlobalPlaylists a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.GlobalPlaylists a:hover span {
+  color: antiquewhite;
+}
+
+.GlobalPlaylists a span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  margin: 25px 0;
+  font-size: .8rem;
+  font-weight: 700;
+  color: #848484;
+  height: 24px;
+}
+
+.GlobalPlaylists img {
+  width: 160px;
+}
+
+.GlobalPlaylists .Ursa-Major img {
+  box-shadow: 5px 5px 0px 0px #fef41d, 10px 10px 0px 0px #ef2a79;
+}
+
+.GlobalPlaylists .Ophiuchus img {
+  box-shadow: 5px 5px 0px 0px rgb(134, 207, 91), 10px 10px 0px 0px rgb(17, 15, 15);
+}
+
+.GlobalPlaylists .Jupiter img {
+  box-shadow: 5px 5px 0px 0px whitesmoke, 10px 10px 0px 0px rgb(218, 45, 83);
+}
+
+.GlobalPlaylists .Pleiades img {
+  box-shadow: 5px 5px 0px 0px antiquewhite, 10px 10px 0px 0px rgb(61, 204, 240);
+}
+
+.GlobalPlaylists .Ceti-Alpha-5 img {
+  box-shadow: 5px 5px 0px 0px rgb(153, 148, 148), 10px 10px 0px 0px rgb(189, 45, 45);
+}
+
+.GlobalPlaylists .Zeta-Reticuli img {
+  box-shadow: 5px 5px 0px 0px antiquewhite, 10px 10px 0px 0px rgb(189, 41, 41);
+}
+
+.GlobalPlaylists .Shai-Hulud img {
+  box-shadow: 5px 5px 0px 0px rgb(252, 192, 42), 10px 10px 0px 0px rgb(20 20 20);
+}
+
+.GlobalPlaylists .Stardust img {
+  box-shadow: 5px 5px 0px 0px rgb(140, 243, 108), 10px 10px 0px 0px rgb(197, 63, 63);
+}
+
+.GlobalPlaylists .Omega img {
+  box-shadow: 5px 5px 0px 0px rgb(176, 239, 255), 10px 10px 0px 0px rgb(248, 230, 71);
+}
+
+.GlobalPlaylists .Vulpecula img {
+  box-shadow: 5px 5px 0px 0px antiquewhite, 10px 10px 0px 0px rgb(131, 98, 14);
+}
+
