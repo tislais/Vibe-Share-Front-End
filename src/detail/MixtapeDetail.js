@@ -32,12 +32,12 @@ export default class MixtapeDetail extends Component {
       <div className={`MixtapeDetail ${mixtape.theme}`}>
         <div className="MixtapeDetailInner">
           <div className="MixtapeTitle">
-            <p>{mixtape.title}</p>
+            <p className="title">{mixtape.title}</p>
           </div>
           <iframe width="600" height="315" title="custom" src={`https://www.youtube.com/embed/videoseries?list=${playlist_id}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
-          
+
           <div className="MixtapeNote">
             <div className="MixtapeRecipient">
               <p>For: {mixtape.recipient}</p>

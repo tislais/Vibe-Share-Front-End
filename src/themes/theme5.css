@@ -1,0 +1,64 @@
+.MixtapeDetail {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.MixtapeDetailInner {
+  width: 600px;
+  text-align: center;
+  margin-top: 60px;
+  background-color: antiquewhite;
+  
+}
+
+.MixtapeTitle {
+  font-size: 2.2rem;
+  font-family: 'Kalam', cursive;
+  padding: 20px 40px;
+  text-align: center;
+  background-color: rgb(189, 41, 41);
+  font-weight: 300;
+  
+}
+
+.MixtapeRecipient {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  font-family: 'Rock Salt', cursive;
+}
+
+.MixtapeNote {
+  font-family: 'Caveat', cursive;
+  padding: 20px;
+  color: rgba(0,0,0,.8);
+  font-size: 1.6rem;
+  background-image: url(https://st2.depositphotos.com/4681751/6993/v/600/depositphotos_69937611-stock-illustration-yellow-lined-paper.jpg);
+}
+
+.MixtapeItems {
+  text-align: left;
+}
+
+.MixtapeItems li { 
+  list-style-type: none;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  padding: 14px;
+  text-transform: uppercase;
+  font-size: .8rem;
+  
+}
+
+iframe {
+  margin: 40px auto;
+}
+
+.title {
+  color: white;
+  display: table; 
+    margin: 0px auto 0px auto; 
+    padding:5px;font-size:20px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 25px;
+}
+
