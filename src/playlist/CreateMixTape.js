@@ -9,15 +9,31 @@ export default class CreateMixTape extends Component {
     playlist_id: '',
     note: '',
     recipient: '',
-    slides: [<img src="/tapes/tape1.png" value="0" alt='0' />, <img src="/tapes/tape2.png" value="1" alt='1' />, <img src="/tapes/tape3.png" alt='2' />, <img src="/tapes/tape4.png" alt='3' />, <img src="/tapes/tape5.png" alt='4' />, <img src="/tapes/tape6.png" alt='5' />, <img src="/tapes/tape7.png" alt='6' />, <img src="/tapes/tape8.png" alt='7' />, <img src="/tapes/tape9.png" alt='8' />, <img src="/tapes/tape10.png" alt='9' />],
-    theme: ''
+    // slides: [<img src="/tapes/tape1.png" value="0" alt='0' />, <img src="/tapes/tape2.png" value="1" alt='1' />, <img src="/tapes/tape3.png" alt='2' />, <img src="/tapes/tape4.png" alt='3' />, <img src="/tapes/tape5.png" alt='4' />, <img src="/tapes/tape6.png" alt='5' />, <img src="/tapes/tape7.png" alt='6' />, <img src="/tapes/tape8.png" alt='7' />, <img src="/tapes/tape9.png" alt='8' />, <img src="/tapes/tape10.png" alt='9' />],
+    slides: [
+      {
+        src: '/tapes/tape1.png',
+        id: 0,
+        alt: 0
+      },
+      {
+        src: '/tapes/tape2.png',
+        id: 1,
+        alt: 1
+      }
+    ],
+    theme: {
+      src: '/tapes/tape1.png',
+      id: 0,
+      alt: 0
+    }
   }
 
   handleSubmit = async e => {
     e.preventDefault();
     const { history } = this.props;
     try {
-      const mixtape = await addMixtape(this.state);
+      const mixtape = await addMixtape({ ...this.state, theme: this.state.theme.id });
       history.push(`/mixtape/${mixtape.id}`);
     }
     catch (err) {
@@ -47,11 +63,17 @@ export default class CreateMixTape extends Component {
   handleTheme = e => {
     console.log(e.target.value);
     this.setState({
-      theme: this.state.slides.filter((item, i) => {
-        console.log(i.toString() === e.target.value);
-        if (i.toString() === e.target.value) return i.toString();
-        else return false;
-        // return i === e.target.value;
+      // theme: this.state.slides.filter((item, i) => {
+      //   console.log(i.toString() === e.target.value);
+      //   if (i.toString() === e.target.value) return i.toString();
+      //   else return false;
+      //   // return i === e.target.value;
+      // })
+      theme: this.state.slides.find(item => {
+        console.log(e.target.value);
+        if (item.id.toString() === e.target.value){
+          return item;
+        } else return null;
       })
     });
   }
@@ -72,8 +94,11 @@ export default class CreateMixTape extends Component {
           <h2>Choose your Theme</h2>
 
           {/* <Carousel onClick={this.handleClick} slides={slides} autoplay={false} interval={1000} /> */}
-          {theme ? theme : <img src='/tapes/tape1.png' alt='base' />}
+          {/* {theme ? theme : <img src='/tapes/tape1.png' alt='base' />} */}
           {/* <img src={this.state?.theme[0].img.src} alt='biscuit' /> */}
+          {
+            theme ? <img src={theme.src} alt={theme.alt} /> : <img src="/tapes/tape1.png" alt="0" />
+          }
           <select name='theme' className='themeDrop'
             onChange={this.handleTheme}>
             {/* <option value="1">1</option>
