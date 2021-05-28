@@ -9,15 +9,65 @@ export default class CreateMixTape extends Component {
     playlist_id: '',
     note: '',
     recipient: '',
-    slides: [<img src="/tapes/tape1.png" value="0" alt='0' />, <img src="/tapes/tape2.png" value="1" alt='1' />, <img src="/tapes/tape3.png" alt='2' />, <img src="/tapes/tape4.png" alt='3' />, <img src="/tapes/tape5.png" alt='4' />, <img src="/tapes/tape6.png" alt='5' />, <img src="/tapes/tape7.png" alt='6' />, <img src="/tapes/tape8.png" alt='7' />, <img src="/tapes/tape9.png" alt='8' />, <img src="/tapes/tape10.png" alt='9' />],
-    theme: ''
+    slides: [
+      {
+        src: '/tapes/tape1.png',
+        id: 'tape-one',
+        alt: 'tape one'
+      },
+      {
+        src: '/tapes/tape2.png',
+        id: 'tape-two',
+        alt: 'tape-two'
+      },
+      {
+        src: '/tapes/tape3.png',
+        id: 'tape-three',
+        alt: 'tape-three'
+      },
+      {
+        src: '/tapes/tape4.png',
+        id: 'tape-four',
+        alt: 'tape-four'
+      },
+      {
+        src: '/tapes/tape5.png',
+        id: 'tape-five',
+        alt: 'tape-five'
+      },
+      {
+        src: '/tapes/tape6.png',
+        id: 'tape-six',
+        alt: 'tape-six'
+      },
+      {
+        src: '/tapes/tape7.png',
+        id: 'tape-seven',
+        alt: 'tape-seven'
+      },
+      {
+        src: '/tapes/tape8.png',
+        id: 'tape-eight',
+        alt: 'tape-eight'
+      },
+      {
+        src: '/tapes/tape9.png',
+        id: 'tape-nine',
+        alt: 'tape-nine'
+      }
+    ],
+    theme: {
+      src: '/tapes/tape1.png',
+      id: 0,
+      alt: 0
+    }
   }
 
   handleSubmit = async e => {
     e.preventDefault();
     const { history } = this.props;
     try {
-      const mixtape = await addMixtape(this.state);
+      const mixtape = await addMixtape({ ...this.state, theme: this.state.theme.id });
       history.push(`/mixtape/${mixtape.id}`);
     }
     catch (err) {
@@ -47,11 +97,12 @@ export default class CreateMixTape extends Component {
   handleTheme = e => {
     console.log(e.target.value);
     this.setState({
-      theme: this.state.slides.filter((item, i) => {
-        console.log(i.toString() === e.target.value);
-        if (i.toString() === e.target.value) return i.toString();
-        else return false;
-        // return i === e.target.value;
+      theme: this.state.slides.find(item => {
+        console.log('e.target.value: ', e.target.value);
+        console.log('item: ', item);
+        if (item.id.toString() === e.target.value){
+          return item;
+        } else return null;
       })
     });
   }
@@ -61,28 +112,19 @@ export default class CreateMixTape extends Component {
   }
 
   render() {
-    console.log(this.state.theme);
-    // let slides = [
-    //   <img src="/tapes/tape1.png" />, <img src="/tapes/tape2.png" />, <img src="/tapes/tape3.png" />, <img src="/tapes/tape4.png" />, <img src="/tapes/tape5.png" />, <img src="/tapes/tape6.png" />, <img src="/tapes/tape7.png" />, <img src="/tapes/tape8.png" />, <img src="/tapes/tape9.png" />, <img src="/tapes/tape10.png" />];
     const { slides, theme } = this.state;
-    console.log(theme[0]);
     return (
       <div className="PlaylistPage">
         <form className="playListForm" onSubmit={this.handleSubmit}>
           <h2>Choose your Theme</h2>
-
-          {/* <Carousel onClick={this.handleClick} slides={slides} autoplay={false} interval={1000} /> */}
-          {theme ? theme : <img src='/tapes/tape1.png' alt='base' />}
-          {/* <img src={this.state?.theme[0].img.src} alt='biscuit' /> */}
+          {
+            theme ? <img src={theme.src} alt={theme.alt} /> : <img src="/tapes/tape1.png" alt="0" />
+          }
           <select name='theme' className='themeDrop'
             onChange={this.handleTheme}>
-            {/* <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option> */}
             {
               slides.map((_, i) => {
-                return <option value={`${i}`}>{i}</option>;
+                return <option value={slides[i].alt.toString()}>{slides[i].alt.toString()}</option>;
               })
             }
           </select>
