@@ -54,7 +54,7 @@ export default class ProfilePage extends Component {
         <p>Grab a YouTube playlist URL!</p>
 
         <div className="Search">
-          <input id="yt-search-input" value={this.state.value} onChange={this.handleChange} placeholder="Find a playlist on YouTube"/><button id="yt-search-button" onClick={()=> window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist&sp=EgIQAw%253D%253D`, '_blank')}>Search</button>
+          <input id="yt-search-input" value={this.state.value} onChange={this.handleChange} placeholder="Find a playlist on YouTube"/><button id="yt-search-button" onClick={()=> window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist&sp=EgIQAw%253D%253D`, '_blank')}><i class="fas fa-search"></i></button>
         </div>
 
         <div id="yt-playlist-button" onClick={()=> window.open('https://www.youtube.com/feed/library', '_blank')}>Already created a playlist?</div>

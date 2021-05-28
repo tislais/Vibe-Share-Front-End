@@ -13,10 +13,11 @@
 .MixtapeTitle {
   font-size: 2.2rem;
   font-family: 'Kalam', cursive;
-  padding: 20px 40px;
+  padding: 10px;
   text-align: center;
   background-color: rgba(0,0,0,.2);
   font-weight: 300;
+  box-shadow: 15px 15px 0px 0px rgb(0 0 0 / 30%);
 }
 
 .MixtapeRecipient {
@@ -26,15 +27,28 @@
 }
 
 .MixtapeNote {
-  font-family: 'Caveat', cursive;
-  padding: 20px;
+  font-family: 'Kalam', cursive;
+  padding: 40px 20px;
   color: rgba(0,0,0,.8);
   font-size: 1.6rem;
   background-image: url(https://st2.depositphotos.com/4681751/6993/v/600/depositphotos_69937611-stock-illustration-yellow-lined-paper.jpg);
+  box-shadow: 15px 15px 0px 0px rgb(0 0 0 / 30%);
+  margin: 30px 0;
+}
+
+.MixtapeNote p { 
+  line-height: 1.6;
+  padding: 40px;
+  font-weight: bold;
+  text-align: left;
 }
 
 .MixtapeItems {
   text-align: left;
+  color: rgba(0,0,0,.8);
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 50px;
 }
 
 .MixtapeItems li { 
@@ -47,7 +61,15 @@
 
 iframe {
   margin: 40px auto;
+  box-shadow: 15px 15px 0px 0px rgb(0 0 0 / 30%);
 }
+
+.MixtapeDetail .title {
+  padding: 10px;
+  font-weight: bold;
+}
+
+
 
 
 .MixtapeDetail.Ursa-Major {
@@ -90,7 +112,8 @@ iframe {
 }
 
 .MixtapeDetail.Pleiades {
-  background-color: rgb(61, 204, 240);
+  background: rgb(61,204,240);
+  background: linear-gradient(75deg, rgba(61,204,240,1) 15%, rgba(149,120,255,1) 67%, rgba(250,235,215,1) 100%);
 }
 
 .MixtapeDetail.Pleiades .MixtapeTitle {

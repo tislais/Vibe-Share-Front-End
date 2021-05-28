@@ -1,5 +1,15 @@
 .CreateMixtapePage {
+  margin-bottom: 60px;
+}
 
+.CreateMixtapePage span,
+.CreateMixtapePage input
+ {
+  padding: 5px;
+}
+
+.CreateMixtapePage textarea {
+  height: 160px;
 }
 
 .CreateMixtapePage .hide {
@@ -8,7 +18,7 @@
 
 .CreateMixtapeForm {
   margin-top: 60px;
-  width: 600px; 
+  width: 380px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,6 +29,29 @@
   height: 230px;
   object-fit: cover;
   margin-bottom: 60px;
+}
+
+.CreateMixtapeForm p {
+  width: 100%;
+  text-align: right;
+}
+
+.CreateMixtapeForm label {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  margin: 10px;
+  color: #f52789;
+}
+
+.CreateMixtapeForm label span {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
 }
 
 .CreateMixtapeForm .Ursa-Major {

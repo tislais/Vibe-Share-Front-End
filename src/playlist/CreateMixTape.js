@@ -124,16 +124,19 @@ export default class CreateMixTape extends Component {
           {
             theme ? <img src={theme.src} alt={theme.alt} className={theme.alt}/> : <img src="/tapes/Ursa-Major.png" alt="booty" />
           }
-          <h2>Theme</h2>
-          <select name='theme' className='themeDrop'
-            onChange={this.handleTheme}>
-            {
-              slides.map((_, i) => {
-                return <option value={slides[i].alt.toString()}>{slides[i].alt.toString()}</option>;
-              })
-            }
-          </select>
-
+          <p>
+            <label>
+              <span>Theme</span>
+              <select name='theme' className='themeDrop'
+                onChange={this.handleTheme}>
+                {
+                  slides.map((_, i) => {
+                    return <option value={slides[i].alt.toString()}>{slides[i].alt.toString()}</option>;
+                  })
+                }
+              </select>
+            </label>
+          </p>
 
           <p>
             <label>
@@ -145,7 +148,7 @@ export default class CreateMixTape extends Component {
 
           <p>
             <label>
-              <span>YouTube Playlist URL</span>
+              <span>Playlist URL</span>
               <input className="youTubeLink" placeholder="YouTube Playlist URL..." onChange={this.handleURL} value={this.state.URL} />
 
             </label>
