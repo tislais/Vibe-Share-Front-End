@@ -62,7 +62,7 @@ export default class ProfilePage extends Component {
         <button id="createPlaylist" onClick={this.handleNav}> + Create Mixtape</button>
 
         <h2>My Mixtapes:</h2>
-        {mixtapes
+        {mixtapes > 0
           ?
           <ul id="MyMixtapes">
             {mixtapes.map(mixtape => (

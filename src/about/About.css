@@ -16,20 +16,21 @@
     object-position: center top;
 }
 
-.About p {
-    font-family: 'Rock Salt', cursive;
-    font-size: 12px;
-    padding: 12px;
-    text-align: center;
-    width: 200px;
+.About p { 
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  padding: 25px;
+  text-align: left;
+  width: 200px;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .About .container {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: 20px;
-    
+    padding: 30px;
 }
 
 .About .person {
