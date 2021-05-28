@@ -49,7 +49,7 @@ export default class CreateMixTape extends Component {
     this.setState({
       theme: this.state.slides.filter((item, i) => {
         console.log(i.toString() === e.target.value);
-        if (i.toString() === e.target.value) return item;
+        if (i.toString() === e.target.value) return i.toString();
         else return false;
         // return i === e.target.value;
       })

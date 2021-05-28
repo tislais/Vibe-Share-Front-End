@@ -94,7 +94,7 @@ export default class AuthPage extends Component {
             }
           </div>
 
-          {error && <p>{error}</p>}
+          {error && <p className="Error">{error}</p>}
         </form>
       </div>
     );
