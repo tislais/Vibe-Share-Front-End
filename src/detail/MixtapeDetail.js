@@ -4,7 +4,7 @@ import './MixtapeDetail.css';
 
 export default class MixtapeDetail extends Component {
   state = {
-    mixtape: [],
+    mixtape: {},
     playlist_id: '',
     mixtapeItems: []
   };
@@ -13,7 +13,11 @@ export default class MixtapeDetail extends Component {
     const { match } = this.props;
     try {
       const mixtape = await getMixtapeById(match.params.id);
-      this.setState({ mixtape: mixtape[0], playlist_id: mixtape[0].playlist_id.split('list=')[1] });
+      this.setState({ 
+        mixtape: mixtape[0], 
+        playlist_id: mixtape[0].playlist_id.split('list=')[1] 
+      });
+
       const mixtapeItems = await getMixtapeItemsById(this.state.playlist_id);
       this.setState({ mixtapeItems: mixtapeItems });
     }
@@ -24,19 +28,20 @@ export default class MixtapeDetail extends Component {
 
 
   render() {
-
     const { playlist_id, mixtapeItems, mixtape } = this.state;
-    console.log(mixtape.note);
 
     return (
       <div className={`MixtapeDetail ${mixtape.theme}`}>
         <div className="MixtapeDetailInner">
-          <div className="MixtapeTitle">
-            <p className="title">{mixtape.title}</p>
-          </div>
-          <iframe width="600" height="315" title="custom" src={`https://www.youtube.com/embed/videoseries?list=${playlist_id}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          
+          <h2 className="MixtapeTitle">
+            {mixtape.title}
+          </h2>
 
-
+          <iframe width="600" height="315" title="custom" 
+            src={`https://www.youtube.com/embed/videoseries?list=${playlist_id}`} 
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+          />
 
           <div className="MixtapeNote">
             <div className="MixtapeRecipient">

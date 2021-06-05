@@ -20,10 +20,13 @@ export default class GlobalPlaylists extends Component {
   }
   
   render() {
+    const { mixtapes } = this.state;
+
     return (
       <div className="GlobalPlaylists">
-        <ul id="all-mix-tapes">
-          {(this.state.mixtapes).map(mixtape => (
+         <ul> {/* don't use id's in modern component UIs (react) */}
+          
+          {mixtapes.map(mixtape => (
             <li key={mixtape.id} className={mixtape.theme}>
               <Link to={`/mixtape/${mixtape.id}`}>
                 <img src={`/tapes/${mixtape.theme}.png`} alt="alt" />

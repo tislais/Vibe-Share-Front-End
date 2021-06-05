@@ -6,8 +6,6 @@ import './ProfilePage.css';
 export default class ProfilePage extends Component {
 
   state = {
-    userName: '',
-    userId: '',
     mixtapes: [],
     input: ''
   }
@@ -15,19 +13,14 @@ export default class ProfilePage extends Component {
 
   async componentDidMount() {
     try {
-      const localStorageUserId = window.localStorage.getItem('USER_ID');
-      const mixtapes = await getMixtapesByUserId(localStorageUserId);
+      const { userId } = this.props;
+      const mixtapes = await getMixtapesByUserId(userId);
       this.setState({ mixtapes: mixtapes });
     }
     catch (err) {
       console.log(err);
     }
   }
-
-  /*   getUserId = () => {
-      
-      this.setState({ userId: localStorageUserId });
-    } */
 
   handleNav = async () => {
     const { history } = this.props;
@@ -38,15 +31,20 @@ export default class ProfilePage extends Component {
     this.setState({ input: event.target.value });
   }
 
+  handleSearch = () => {
+    const { input } = this.state;
+    window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist&sp=EgIQAw%253D%253D`, '_blank')
+  }
+
   render() {
-
     // if any mixtapes created, show them in a list
-    // if not...
-
+    // if not...  ...then what?
     const { mixtapes, input } = this.state;
     const { userName } = this.props;
+
     return (
       <div className="ProfilePage">
+
         <h1>Welcome, {userName}</h1>
 
         {/*on click module appears. redirect to "create page"*/}
@@ -54,27 +52,45 @@ export default class ProfilePage extends Component {
         <p>Grab a YouTube playlist URL!</p>
 
         <div className="Search">
-          <input id="yt-search-input" value={this.state.value} onChange={this.handleChange} placeholder="Find a playlist on YouTube"/><button id="yt-search-button" onClick={()=> window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist&sp=EgIQAw%253D%253D`, '_blank')}><i class="fas fa-search"></i></button>
+          <input id="yt-search-input" 
+            placeholder="Find a playlist on YouTube"
+            value={this.state.value} 
+            onChange={this.handleChange} 
+          />
+
+          <a id="yt-search-button" 
+            href={`https://www.youtube.com/results?search_query=${input}%2C+playlist&sp=EgIQAw%253D%253D`}
+            target="_blank">
+              <i class="fas fa-search"></i>
+          </a>
         </div>
 
-        <div id="yt-playlist-button" onClick={()=> window.open('https://www.youtube.com/feed/library', '_blank')}>Already created a playlist?</div>
+        <a id="yt-playlist-button" 
+          href="https://www.youtube.com/feed/library" 
+          target="_blank">
+          Already created a playlist?
+        </a>
         
-        <button id="createPlaylist" onClick={this.handleNav}> + Create Mixtape</button>
+        <Link to="/create-mixtape"> + Create Mixtape</Link>
 
         <h2>My Mixtapes:</h2>
-        {mixtapes > 0
-          ?
-          <ul id="MyMixtapes">
-            {mixtapes.map(mixtape => (
-              <li key={mixtape.id}>
-                <Link to={`/mixtape/${mixtape.id}`}>
-                  <span>For: {mixtape.recipient}</span>
-                  <span>{mixtape.title}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          : <span className="Slacker">You haven't added a mixtape yet, slacker!</span>}
+        {/* 0 is falsey */}
+        {mixtapes
+          ? <ul id="MyMixtapes">
+              {mixtapes.map(mixtape => (
+                <li key={mixtape.id}>
+                  <Link to={`/mixtape/${mixtape.id}`}>
+                    <span>For: {mixtape.recipient}</span>
+                    <span>{mixtape.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+          : <span className="Slacker">
+              You haven't added a mixtape yet, slacker!
+            </span>
+        }
       </div>
 
     );
