@@ -34,33 +34,32 @@ export default class AuthPage extends Component {
     catch (err) {
       this.setState({ error: err.error });
     }
-
-
   }
 
   handleNameChange = ({ target }) => {
     this.setState({ name: target.value });
   }
+
   handleEmailChange = ({ target }) => {
     this.setState({ email: target.value });
   }
+
   handlePasswordChange = ({ target }) => {
     this.setState({ password: target.value });
   }
 
-
-
   render() {
     const { isSignUp, name, email, password, error } = this.state;
 
-
-
     return (
       <div className="AuthPage">
+        
         <h1>
           <div className="neon">Vibe Share</div>
         </h1>
+
         <form onSubmit={this.handleSubmit}>
+          
           {isSignUp && <p>
             <label>
               <span>Name</span>
@@ -87,6 +86,7 @@ export default class AuthPage extends Component {
           </p>
 
           <button type="submit">Sign {isSignUp ? 'Up' : 'In'}</button>
+          
           <div type="button" className="switch" onClick={this.handleSwitch}>
             {isSignUp
               ? 'Already have an account?'

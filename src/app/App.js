@@ -39,7 +39,7 @@ class App extends Component {
   };
 
   render() {
-    const { token, userName } = this.state;
+    const { token, userName, userId } = this.state;
 
 
     return (
@@ -89,7 +89,7 @@ class App extends Component {
               <Route path="/profile-page" exact={true}
                 render={routerProps => (
                   token
-                    ? <ProfilePage {...routerProps} userName={userName} />
+                    ? <ProfilePage {...routerProps} userId={userId} userName={userName} />
                     : <Redirect to="/auth" />
                 )}
               />
@@ -105,8 +105,6 @@ class App extends Component {
                   <About {...routerProps} />
                 )}
               />
-
-              
 
               <Redirect to="/" />
 
