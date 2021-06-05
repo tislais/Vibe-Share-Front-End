@@ -22,18 +22,8 @@ export default class ProfilePage extends Component {
     }
   }
 
-  handleNav = async () => {
-    const { history } = this.props;
-    history.push('/create-mixtape');
-  }
-
   handleChange = async (event) => {
     this.setState({ input: event.target.value });
-  }
-
-  handleSearch = () => {
-    const { input } = this.state;
-    window.open(`https://www.youtube.com/results?search_query=${input}%2C+playlist&sp=EgIQAw%253D%253D`, '_blank')
   }
 
   render() {
